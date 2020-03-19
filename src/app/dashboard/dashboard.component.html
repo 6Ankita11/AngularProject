@@ -1,0 +1,39 @@
+<mat-toolbar color="primary" class="heading"[ngStyle]="{'font-size.px':20}">{{name|uppercase}} <p [ngStyle]="text">{{data.email}}</p>
+    <button class="btn btn-primary" style="float:right;margin:20px;" (click)="logout()">Logout</button></mat-toolbar>
+
+<mat-drawer-container class="example-container">
+    <mat-drawer mode="side" opened>
+        <app-header></app-header>
+    </mat-drawer>
+    <mat-drawer-content>
+        <p class="text-center">UserName{{userName}}</p>
+        <div class="row">
+            <div class='col-md-6'>
+                <app-child class="text-success" [myText]="mytxt"></app-child>
+            </div>
+            <div class="col-md-6">
+                <p class="text-center text-success">Random Number{{randnum}}</p>
+               <app-child2 (generateNumber)="displaymsg($event)"></app-child2>
+            </div>
+        </div>
+       
+        
+        <div class="main-content">
+        <p [ngStyle]="text1">Custom Directive</p>
+        <br><br>
+        
+        <h3 appChangeText>{{name}}</h3>
+     <div>
+         <p [ngStyle]="text1">Custom Pipe</p>
+         <br><br>
+         <p>{{value|appPipe}}</p>
+         <ul [class]="'text-success'">
+            <li [ngStyle]="{'font-size.px':24}" *ngFor = "let nam of nameArr">
+                {{nam|appPipe}}
+            </li> 
+        </ul>
+     </div>
+     </div></mat-drawer-content>
+  </mat-drawer-container>
+
+ <router-outlet></router-outlet>

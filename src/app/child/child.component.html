@@ -1,0 +1,11 @@
+<div class="text-center">
+<p style="font-weight: 400;">Component Interaction from parent to child</p>
+<input type="text" placeholder="search" [value]="myText">
+<br><br><br>
+<hr>
+<div class="box">
+    <p class="text-success">userName:{{userName}}</p>
+    <input type="text" placeholder="Updatename" #uname>
+    <button class="btn btn-success ml-2" (click)="updateUserName(uname)">Update</button>
+</div>
+</div>

@@ -1,0 +1,10 @@
+<div class="text-center">
+    <p class="text-success" style="font-weight: 400;">Component Interaction from Child to Parent</p>
+    <button class = "btn btn-primary" (click)="randomNumber()">Random</button>
+    <hr>
+    <div class="box">
+        <p class="text-success">userName:{{userName}}</p>
+        <input type="text" placeholder="Updatename" #uname>
+        <button (click)="updateUserName(uname)"class="btn btn-success ml-2">Update</button>
+    </div>
+    </div>

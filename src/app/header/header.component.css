@@ -1,0 +1,8 @@
+*{
+    overflow-x: hidden;
+}
+a{
+    display:block;
+    font-size: 20px;
+    margin-top: 30px;
+}

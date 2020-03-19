@@ -1,0 +1,16 @@
+
+<mat-toolbar color="primary">User Details {{name}}</mat-toolbar>
+<p class="text-danger text-center mt-4">{{message|uppercase}}</p>
+<mat-card>
+<div class="container" class="text-center mt-4" >
+    <form class="form-border"[formGroup]="profileForm" (ngSubmit)="onSubmit()">
+        <label>Email</label>
+        <input type = "text" formControlName ="email">
+        <br><br>
+        <label>Password</label>
+        <input type ="text" formControlName ="password">
+        <br><br>
+        <button type="submit" class="btn btn-primary"[disabled]='!profileForm.valid'>Submit</button>
+    </form>
+</div>
+</mat-card>
